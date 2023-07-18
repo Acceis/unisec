@@ -7,9 +7,7 @@ require 'unisec/utils'
 module Unisec
   module CLI
     module Commands
-      extend Dry::CLI::Registry
-
-      # CLI sub-commands `unisec surrogates xxx`for the class {Unisec::Surrogates} from the lib.
+      # CLI sub-commands `unisec surrogates xxx` for the class {Unisec::Surrogates} from the lib.
       module Surrogates
         # Command `unisec surrogates from`
         #
@@ -53,9 +51,9 @@ module Unisec
         class To < Dry::CLI::Command
           desc 'Code point ➡️ Surrogates'
 
-          argument :name, required: true,
-                          desc: 'One code point (character) (in hexadecimal (0xXXXX), decimal (0dXXXX), binary ' \
-                                '(0bXXXX) or as text)'
+          argument :codepoint, required: true,
+                               desc: 'One code point (character) (in hexadecimal (0xXXXX), decimal (0dXXXX), binary ' \
+                                     '(0bXXXX) or as text)'
 
           # Calculate the surrogates based on the Unicode code point.
           # @param codepoint [String] decimal codepoint

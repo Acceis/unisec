@@ -4,7 +4,7 @@ require 'unisec/utils'
 require 'ctf_party'
 
 module Unisec
-  # UTF-16 surrogates convertion.
+  # UTF-16 surrogates conversion.
   class Surrogates
     # Unicode code point
     # @return [Integer] decimal codepoint
