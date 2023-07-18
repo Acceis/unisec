@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'unisec'
+require 'unisec/cli/cli'
+
+Dry::CLI.new(Unisec::CLI::Commands).call

@@ -1,0 +1,24 @@
+inherit_mode:
+  merge:
+    - Exclude
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+  Exclude:
+    - 'test/*.rb'
+  SuggestExtensions: false
+Layout/HashAlignment:
+  Exclude:
+    - '*.gemspec'
+Lint/MissingSuper:
+  Exclude:
+    - 'lib/tls_map/cli/cli.rb'
+Metrics/MethodLength:
+  Max: 20
+Naming/MethodParameterName:
+  Exclude:
+    - 'lib/unisec/surrogates.rb'
+Style/Documentation:
+  Exclude:
+    - 'lib/unisec/cli/surrogates.rb'
+    - 'lib/unisec/utils.rb'

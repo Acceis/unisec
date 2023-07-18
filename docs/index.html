@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>unisec</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="_media/unisec-favicon.ico">
+  <!-- Themes (light + dark) -->
+  <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="vendor/themes/theme-simple-dark.css">
+  <link rel="stylesheet" media="(prefers-color-scheme: light)" href="vendor/themes/theme-simple.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'unisec',
+      repo: 'https://github.com/Acceis/unisec',
+      loadSidebar: true,
+      subMaxLevel: 6,
+      sidebarDisplayLevel: 1,
+      loadNavbar: true,
+      coverpage: true,
+      onlyCover: true,
+      logo: '_media/unisec-logo.png',
+      themeColor: '#ec1d25',
+      search: 'auto',
+      themeable: {
+        readyTransition: true,
+        responsiveTables: true
+      },
+      tabs: {
+        persist    : true,
+        sync       : true,
+        theme      : 'classic',
+        tabComments: true,
+        tabHeadings: true
+      },
+      markdown: {
+        smartypants: false
+      }
+    }
+  </script>
+  <script src="vendor/docsify.min.js"></script>
+  <script src="vendor/plugins/search.min.js"></script>
+  <script src="vendor/plugins/emoji.min.js"></script>
+  <script src="vendor/prismjs/components/prism-ruby.min.js"></script>
+  <script src="vendor/plugins/docsify-themeable.min.js"></script>
+  <script src="vendor/plugins/docsify-tabs.min.js"></script>
+  <script src="vendor/plugins/docsify-sidebar-collapse.min.js"></script>
+  <script src="vendor/plugins/docsify-image-caption.min.js"></script>
+  <script src="vendor/plugins/docsify-plugin-ignore-blockquote-titles-sidebar.js"></script>
+</body>
+</html>

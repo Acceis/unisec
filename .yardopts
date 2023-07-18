@@ -1,0 +1,10 @@
+--output-dir docs/yard
+--markup markdown
+--markup-provider commonmarker
+--plugin coderay
+-
+--main README.md
+docs/pages/*.md
+docs/CHANGELOG.md
+docs/about.md
+LICENSE

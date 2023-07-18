@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: usage
+  
+    &mdash; Documentation by YARD 0.9.34
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "usage";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="file_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: usage</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1>Usage</h1>
+<h2>CLI</h2>
+<p>List commands:</p>
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> unisec --help
+<span style="color:#606">Commands</span>:
+  unisec surrogates [<span style="color:#036;font-weight:bold">SUBCOMMAND</span>]
+</code></pre>
+<p>List sub-commands:</p>
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> unisec surrogates --help
+<span style="color:#606">Commands</span>:
+  unisec surrogates from <span style="color:#036;font-weight:bold">HIGH</span> <span style="color:#036;font-weight:bold">LOW</span>                 <span style="color:#777"># Code point ⬅️ Surrogates</span>
+  unisec surrogates to <span style="color:#036;font-weight:bold">NAME</span>                       <span style="color:#777"># Code point ➡️ Surrogates</span>
+</code></pre>
+<p>Sub-command help:</p>
+<pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> unisec surrogates from --help
+<span style="color:#606">Command</span>:
+  unisec surrogates from
+
+<span style="color:#606">Usage</span>:
+  unisec surrogates from <span style="color:#036;font-weight:bold">HIGH</span> <span style="color:#036;font-weight:bold">LOW</span>
+
+<span style="color:#606">Description</span>:
+  <span style="color:#036;font-weight:bold">Code</span> point ⬅️ <span style="color:#036;font-weight:bold">Surrogates</span>
+
+<span style="color:#606">Arguments</span>:
+  <span style="color:#036;font-weight:bold">HIGH</span>                              <span style="color:#777"># REQUIRED High surrogate (in hexadecimal (0xXXXX), decimal (0dXXXX), binary (0bXXXX) or as text)</span>
+  <span style="color:#036;font-weight:bold">LOW</span>                               <span style="color:#777"># REQUIRED Low surrogate (in hexadecimal (0xXXXX), decimal (0dXXXX), binary (0bXXXX) or as text)</span>
+
+<span style="color:#606">Options</span>:
+  --help, -h                        <span style="color:#777"># Print this help</span>
+</code></pre>
+<p>Also find CLI examples in <a href="https://acceis.github.io/unisec/yard/Unisec/CLI/Commands">the library documentation</a>, e.g. <a href="https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Surrogates/From">surrogates</a>.</p>
+<h2>Library</h2>
+<p>See examples in <a href="https://acceis.github.io/unisec/yard/Unisec">the library documentation</a>, e.g. <a href="https://acceis.github.io/unisec/yard/Unisec/Surrogates">surrogates</a>.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Tue Jul 18 16:01:15 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.34 (ruby-3.2.0).
+</div>
+
+    </div>
+  </body>
+</html>
