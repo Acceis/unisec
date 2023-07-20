@@ -2,6 +2,7 @@
 
 require 'unisec/cli/surrogates'
 require 'unisec/cli/hexdump'
+require 'unisec/cli/properties'
 
 module Unisec
   # Module used to create the CLI for the executable
@@ -15,6 +16,9 @@ module Unisec
       register 'surrogates to', Surrogates::To
       register 'surrogates from', Surrogates::From
       register 'hexdump', Hexdump
+      register 'properties list', Properties::List
+      register 'properties codepoints', Properties::Codepoints
+      register 'properties char', Properties::Char
     end
   end
 end

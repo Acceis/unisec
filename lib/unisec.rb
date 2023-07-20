@@ -4,3 +4,4 @@ require 'unisec/version'
 
 require 'unisec/surrogates'
 require 'unisec/hexdump'
+require 'unisec/properties'

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Unisec::CLI::Commands::Surrogates::From
+  Class: Unisec::CLI::Commands::Properties::Codepoints
   
     &mdash; Documentation by YARD 0.9.34
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../../../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "Unisec::CLI::Commands::Surrogates::From";
+  pathId = "Unisec::CLI::Commands::Properties::Codepoints";
   relpath = '../../../../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../../../../_index.html">Index (F)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../../../Unisec.html" title="Unisec (module)">Unisec</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CLI.html" title="Unisec::CLI (module)">CLI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Commands.html" title="Unisec::CLI::Commands (module)">Commands</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Surrogates.html" title="Unisec::CLI::Commands::Surrogates (module)">Surrogates</a></span></span>
+    <a href="../../../../_index.html">Index (C)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../Unisec.html" title="Unisec (module)">Unisec</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CLI.html" title="Unisec::CLI (module)">CLI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Commands.html" title="Unisec::CLI::Commands (module)">Commands</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Properties.html" title="Unisec::CLI::Commands::Properties (module)">Properties</a></span></span>
      &raquo; 
-    <span class="title">From</span>
+    <span class="title">Codepoints</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Unisec::CLI::Commands::Surrogates::From
+      <div id="content"><h1>Class: Unisec::CLI::Commands::Properties::Codepoints
   
   
   
@@ -76,7 +76,7 @@
           
             <li class="next">Dry::CLI::Command</li>
           
-            <li class="next">Unisec::CLI::Commands::Surrogates::From</li>
+            <li class="next">Unisec::CLI::Commands::Properties::Codepoints</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,20 +96,18 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/unisec/cli/surrogates.rb</dd>
+    <dd>lib/unisec/cli/properties.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Command <code>unisec surrogates from</code></p>
+    <p>Command <code>unisec properties codepoints</code></p>
 <p>Example:</p>
-<pre class="code plaintext"><code class="plaintext">$ unisec surrogates from 0xD801 0xDC37
-Char: 𐐷
-Code Point: 0x10437, 0d66615, 0b10000010000110111
-High Surrogate: 0xD801, 0d55297, 0b1101100000000001
-Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
+<pre class="code plaintext"><code class="plaintext">$ unisec properties codepoints Bidi_Control
+U+61C     ؜    ARABIC LETTER MARK
+…
 </code></pre>
 
 
@@ -136,7 +134,7 @@ Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(high: nil, low: nil)  &#x21d2; Object </a>
+      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(property: nil)  &#x21d2; Object </a>
     
 
     
@@ -150,7 +148,7 @@ Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Calculate the Unicode code point based on the surrogates.</p>
+    <span class="summary_desc"><div class='inline'><p>List code points matching an Unicode property.</p>
 </div></span>
   
 </li>
@@ -169,7 +167,7 @@ Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
       <div class="method_details first">
   <h3 class="signature first" id="call-instance_method">
   
-    #<strong>call</strong>(high: nil, low: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>call</strong>(property: nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -177,7 +175,7 @@ Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Calculate the Unicode code point based on the surrogates.</p>
+    <p>List code points matching an Unicode property</p>
 
 
   </div>
@@ -188,7 +186,7 @@ Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
   
     <li>
       
-        <span class='name'>high</span>
+        <span class='name'>property</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -198,24 +196,7 @@ Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
       
       
         &mdash;
-        <div class='inline'><p>decimal high surrogate</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>low</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>decimal low surrogate</p>
+        <div class='inline'><p>property name</p>
 </div>
       
     </li>
@@ -229,17 +210,15 @@ Low Surrogate: 0xDC37, 0d56375, 0b1101110000110111
       <pre class="lines">
 
 
-34
-35
-36
-37</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/cli/surrogates.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/cli/properties.rb', line 50</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">high</span>: <span style="color:#069">nil</span>, <span style="color:#606">low</span>: <span style="color:#069">nil</span>, **)
-  puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Surrogates</span>.new(<span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Utils</span>::<span style="color:#036;font-weight:bold">String</span>.convert(high, <span style="color:#A60">:integer</span>),
-                              <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Utils</span>::<span style="color:#036;font-weight:bold">String</span>.convert(low, <span style="color:#A60">:integer</span>)).display
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">property</span>: <span style="color:#069">nil</span>, **)
+  <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Properties</span>.codepoints_display(property)
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>

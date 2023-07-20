@@ -14,6 +14,7 @@ end
 # Needed for the CLI & library
 group :runtime, :all do
   gem 'ctf-party', '~> 2.3' # string conversion
+  gem 'twitter_cldr', '~> 6.11', '>= 6.11.5' # ICU / CLDR
 end
 
 # Needed to install dependencies
