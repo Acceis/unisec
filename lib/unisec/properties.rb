@@ -44,13 +44,13 @@ module Unisec
     # @example
     #   Unisec::Properties.codepoints_display('Quotation_Mark')
     #   # =>
-    #   # U+22      "    QUOTATION MARK
-    #   # U+27      '    APOSTROPHE
+    #   # U+0022      "    QUOTATION MARK
+    #   # U+0027      '    APOSTROPHE
     #   # …
     def self.codepoints_display(prop)
       codepoints = Properties.codepoints(prop)
       codepoints.each do |cp|
-        puts "U+#{cp[:codepoint].to_s(16).upcase.ljust(7)} #{cp[:char].ljust(4)} #{cp[:name]}"
+        puts "#{Properties.char2codepoint(cp[:char]).ljust(7)} #{cp[:char].ljust(4)} #{cp[:name]}"
       end
       nil
     end
