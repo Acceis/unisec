@@ -103,7 +103,15 @@
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>CLI commands <code>unisec hexdumps xxx</code> for the class <span class='object_link'><a href="../../Hexdump.html" title="Unisec::Hexdump (class)">Hexdump</a></span> from the lib.</p>
+    <p>CLI command <code>unisec hexdumps</code> for the class <span class='object_link'><a href="../../Hexdump.html" title="Unisec::Hexdump (class)">Hexdump</a></span> from the lib.</p>
+<p>Example:</p>
+<pre class="code plaintext"><code class="plaintext">$ unisec hexdump &quot;ACCEIS&quot;
+UTF-8: 41 43 43 45 49 53
+UTF-16BE: 0041 0043 0043 0045 0049 0053
+UTF-16LE: 4100 4300 4300 4500 4900 5300
+UTF-32BE: 00000041 00000043 00000043 00000045 00000049 00000053
+UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
+</code></pre>
 
 
   </div>
@@ -205,12 +213,12 @@
       <pre class="lines">
 
 
-18
-19
-20</pre>
+29
+30
+31</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/cli/hexdump.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/cli/hexdump.rb', line 29</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">input</span>: <span style="color:#069">nil</span>, **)
   puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Hexdump</span>.new(input).display
@@ -225,7 +233,7 @@
 </div>
 
       <div id="footer">
-  Generated on Thu Jul 20 16:52:23 2023 by
+  Generated on Fri Jul 21 12:37:32 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.0).
 </div>

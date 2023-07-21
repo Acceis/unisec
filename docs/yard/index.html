@@ -72,7 +72,29 @@
 <p>A CLI tool and library to play with Unicode security.</p>
 <h2>Features</h2>
 <ul>
-<li>Code point ↔️ Surrogates</li>
+<li><strong>Confusables / homoglyphs</strong>
+<ul>
+<li>List confusables characters for a given character</li>
+<li>Replace all characters from a string with random confusables</li>
+</ul>
+</li>
+<li><strong>Hexdump</strong>
+<ul>
+<li>UTF-8, UTF-16, UTF-32 hexadecimal dumps</li>
+</ul>
+</li>
+<li><strong>Properties</strong>
+<ul>
+<li>Get all properties of a given Unicode character</li>
+<li>List code points matching a Unicode property</li>
+<li>List all Unicode properties name</li>
+</ul>
+</li>
+<li><strong>Surrogates</strong>
+<ul>
+<li>Code point ↔️ Surrogates conversion</li>
+</ul>
+</li>
 </ul>
 <h2>Installation</h2>
 <pre class="code plaintext"><code class="plaintext">$ gem install unisec
@@ -88,7 +110,7 @@
 </div></div>
 
       <div id="footer">
-  Generated on Thu Jul 20 16:52:22 2023 by
+  Generated on Fri Jul 21 12:37:32 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.0).
 </div>

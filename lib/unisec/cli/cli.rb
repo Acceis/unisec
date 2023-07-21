@@ -3,6 +3,7 @@
 require 'unisec/cli/surrogates'
 require 'unisec/cli/hexdump'
 require 'unisec/cli/properties'
+require 'unisec/cli/confusables'
 
 module Unisec
   # Module used to create the CLI for the executable
@@ -19,6 +20,8 @@ module Unisec
       register 'properties list', Properties::List
       register 'properties codepoints', Properties::Codepoints
       register 'properties char', Properties::Char
+      register 'confusables list', Confusables::List
+      register 'confusables randomize', Confusables::Randomize
     end
   end
 end

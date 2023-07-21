@@ -18,7 +18,17 @@ A CLI tool and library to play with Unicode security.
 
 ## Features
 
-- Code point ↔️ Surrogates
+- **Confusables / homoglyphs**
+  - List confusables characters for a given character
+  - Replace all characters from a string with random confusables
+- **Hexdump**
+  - UTF-8, UTF-16, UTF-32 hexadecimal dumps
+- **Properties**
+  - Get all properties of a given Unicode character
+  - List code points matching a Unicode property
+  - List all Unicode properties name
+- **Surrogates**
+  - Code point ↔️ Surrogates conversion
 
 ## Installation
 

@@ -45,7 +45,7 @@ module Unisec
 
           argument :property, required: true, desc: 'Unicode property name'
 
-          # List code points matching an Unicode property
+          # List code points matching a Unicode property
           # @param property [String] property name
           def call(property: nil, **)
             Unisec::Properties.codepoints_display(property)
@@ -65,12 +65,12 @@ module Unisec
         # …
         # ```
         class Char < Dry::CLI::Command
-          desc 'Returns all properties of a given unicode character (code point as string)'
+          desc 'Returns all properties of a given Unicode character (code point as string)'
 
           argument :character, required: true, desc: 'Unicode character'
           option :extended, default: false, values: %w[true false], desc: 'Show all properties'
 
-          # Returns all properties of a given unicode character (code point as string)
+          # Returns all properties of a given Unicode character (code point as string)
           # @param character [String] Unicode code point (as character / string)
           # @option options [Boolean] :extended Show all properties
           def call(character: nil, **options)

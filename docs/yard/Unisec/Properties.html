@@ -927,8 +927,8 @@ show all of them.</p>
       
       <pre class="example code"><code><span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Properties</span>.codepoints_display(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Quotation_Mark</span><span style="color:#710">'</span></span>)
 <span style="color:#777"># =&gt;</span>
-<span style="color:#777"># U+22      &quot;    QUOTATION MARK</span>
-<span style="color:#777"># U+27      '    APOSTROPHE</span>
+<span style="color:#777"># U+0022      &quot;    QUOTATION MARK</span>
+<span style="color:#777"># U+0027      '    APOSTROPHE</span>
 <span style="color:#777"># …</span></code></pre>
     
   </div>
@@ -954,7 +954,7 @@ show all of them.</p>
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">codepoints_display</span>(prop)
   codepoints = <span style="color:#036;font-weight:bold">Properties</span>.codepoints(prop)
   codepoints.each <span style="color:#080;font-weight:bold">do</span> |cp|
-    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">U+</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:codepoint</span>].to_s(<span style="color:#00D">16</span>).upcase.ljust(<span style="color:#00D">7</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:char</span>].ljust(<span style="color:#00D">4</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:name</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#036;font-weight:bold">Properties</span>.char2codepoint(cp[<span style="color:#A60">:char</span>]).ljust(<span style="color:#00D">7</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:char</span>].ljust(<span style="color:#00D">4</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:name</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
   <span style="color:#080;font-weight:bold">end</span>
   <span style="color:#069">nil</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -1033,7 +1033,7 @@ show all of them.</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Jul 20 16:52:23 2023 by
+  Generated on Fri Jul 21 12:37:32 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.2.0).
 </div>
