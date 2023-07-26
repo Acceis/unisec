@@ -25,7 +25,7 @@ end
 
 # Needed to run tests
 group :development, :test do
-  gem 'minitest', '~> 5.18'
+  gem 'minitest', '~> 5.19'
   gem 'minitest-skip', '~> 0.0' # skip dummy tests
   gem 'rake', '~> 13.0'
 end
