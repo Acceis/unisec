@@ -55,9 +55,11 @@ Options:
   - [Char](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/Char)
   - [Codepoints](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/Codepoints)
   - [List](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/List)
+- [Size](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Size)
 - **Surrogates**
   - [From](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Surrogates/From)
   - [To](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Surrogates/To)
+- [Versions](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Versions)
 
 [Library documentation for commands](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands).
 
@@ -68,4 +70,6 @@ See examples in [the library documentation](https://acceis.github.io/unisec/yard
 - [Unisec::Confusables](https://acceis.github.io/unisec/yard/Unisec/Confusables)
 - [Unisec::Hexdump](https://acceis.github.io/unisec/yard/Unisec/Hexdump)
 - [Unisec::Properties](https://acceis.github.io/unisec/yard/Unisec/Properties)
+- [Unisec::Size](https://acceis.github.io/unisec/yard/Unisec/Size)
 - [Unisec::Surrogates](https://acceis.github.io/unisec/yard/Unisec/Surrogates)
+- [Unisec::Versions](https://acceis.github.io/unisec/yard/Unisec/Versions)
