@@ -7,13 +7,15 @@ Gem::Specification.new do |s|
   s.version       = Unisec::VERSION
   s.platform      = Gem::Platform::RUBY
   s.summary       = 'Unicode Security Toolkit'
-  s.description   = 'Toolkit for security research manipulating Unicode'
+  s.description   = 'Toolkit for security research manipulating Unicode: '
+  s.description   += 'confusables, homoglyphs, hexdump, code point, UTF-8, UTF-16, UTF-32, properties, regexp search, '
+  s.description   += 'size, grapheme, surrogates, version, ICU, CLDR, UCD'
   s.authors       = ['Alexandre ZANNI']
   s.email         = 'alexandre.zanni@europe.com'
   s.homepage      = 'https://github.com/Acceis/unisec'
   s.license       = 'MIT'
 
-  s.files         = Dir['bin/*'] + Dir['lib/**/*.rb'] + ['LICENSE']
+  s.files         = Dir['bin/*', 'lib/**/*.rb', 'data/*', 'LICENSE']
   s.bindir        = 'bin'
   s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
   s.require_paths = ['lib']

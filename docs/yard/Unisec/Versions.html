@@ -220,10 +220,6 @@
       <pre class="lines">
 
 
-69
-70
-71
-72
 73
 74
 75
@@ -234,10 +230,15 @@
 80
 81
 82
-83</pre>
+83
+84
+85
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/versions.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/versions.rb', line 73</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">display</span> <span style="color:#777"># rubocop:disable Metrics/AbcSize</span>
   data = versions
@@ -249,6 +250,7 @@
   display.call(<span style="color:#A60">:twittercldr_icu</span>)
   display.call(<span style="color:#A60">:twittercldr_cldr</span>)
   display.call(<span style="color:#A60">:ruby_unicode_emoji</span>)
+  display.call(<span style="color:#A60">:ucd_derivedname</span>)
   puts <span style="color:#036;font-weight:bold">Paint</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#D20">Gems:</span><span style="color:#710">&quot;</span></span>, <span style="color:#A60">:underline</span>]
   display.call(<span style="color:#A60">:unisec</span>)
   display.call(<span style="color:#A60">:twittercldr</span>)
@@ -351,7 +353,11 @@
 53
 54
 55
-56</pre>
+56
+57
+58
+59
+60</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/unisec/versions.rb', line 17</span>
@@ -393,6 +399,10 @@
     <span style="color:#606">unicodeconfusable_unicode</span>: {
       <span style="color:#606">version</span>: <span style="color:#036;font-weight:bold">Unicode</span>::<span style="color:#036;font-weight:bold">Confusable</span>::<span style="color:#036;font-weight:bold">UNICODE_VERSION</span>,
       <span style="color:#606">label</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Unicode (unicode-confusable gem)</span><span style="color:#710">'</span></span>
+    },
+    <span style="color:#606">ucd_derivedname</span>: {
+      <span style="color:#606">version</span>: <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Rugrep</span>.ucd_derivedname_version,
+      <span style="color:#606">label</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">UCD (data/DerivedName.txt)</span><span style="color:#710">'</span></span>
     }
   }
 <span style="color:#080;font-weight:bold">end</span></pre>
@@ -406,9 +416,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Aug 18 09:49:54 2023 by
+  Generated on Wed Oct 18 17:02:21 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.0).
+  0.9.34 (ruby-3.2.2).
 </div>
 
     </div>

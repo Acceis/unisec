@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
-require 'unisec/cli/surrogates'
+require 'unisec/cli/confusables'
 require 'unisec/cli/hexdump'
 require 'unisec/cli/properties'
-require 'unisec/cli/confusables'
-require 'unisec/cli/versions'
+require 'unisec/cli/rugrep'
 require 'unisec/cli/size'
+require 'unisec/cli/surrogates'
+require 'unisec/cli/versions'
 
 module Unisec
   # Module used to create the CLI for the executable
@@ -16,16 +17,17 @@ module Unisec
 
       # Mapping between the (sub-)commands as seen by the user
       # on the command-line interface and the CLI modules in the lib
-      register 'surrogates to', Surrogates::To
-      register 'surrogates from', Surrogates::From
-      register 'hexdump', Hexdump
-      register 'properties list', Properties::List
-      register 'properties codepoints', Properties::Codepoints
-      register 'properties char', Properties::Char
       register 'confusables list', Confusables::List
       register 'confusables randomize', Confusables::Randomize
-      register 'versions', Versions
+      register 'grep', Grep
+      register 'hexdump', Hexdump
+      register 'properties char', Properties::Char
+      register 'properties codepoints', Properties::Codepoints
+      register 'properties list', Properties::List
       register 'size', Size
+      register 'surrogates from', Surrogates::From
+      register 'surrogates to', Surrogates::To
+      register 'versions', Versions
     end
   end
 end

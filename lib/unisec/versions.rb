@@ -51,6 +51,10 @@ module Unisec
         unicodeconfusable_unicode: {
           version: Unicode::Confusable::UNICODE_VERSION,
           label: 'Unicode (unicode-confusable gem)'
+        },
+        ucd_derivedname: {
+          version: Unisec::Rugrep.ucd_derivedname_version,
+          label: 'UCD (data/DerivedName.txt)'
         }
       }
     end
@@ -76,6 +80,7 @@ module Unisec
       display.call(:twittercldr_icu)
       display.call(:twittercldr_cldr)
       display.call(:ruby_unicode_emoji)
+      display.call(:ucd_derivedname)
       puts Paint["\nGems:", :underline]
       display.call(:unisec)
       display.call(:twittercldr)

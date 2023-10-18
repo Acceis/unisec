@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Unisec::Rugrep
+  
+    &mdash; Documentation by YARD 0.9.34
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Unisec::Rugrep";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Unisec.html" title="Unisec (module)">Unisec</a></span></span>
+     &raquo; 
+    <span class="title">Rugrep</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Unisec::Rugrep
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Unisec::Rugrep</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/unisec/rugrep.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>Ruby grep : Ruby regular expression search for Unicode code point names</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  
+    <h2>
+      Constant Summary
+      <small><a href="#" class="constants_summary_toggle">collapse</a></small>
+    </h2>
+
+    <dl class="constants">
+      
+        <dt id="UCD_DERIVEDNAME-constant" class="">UCD_DERIVEDNAME =
+          <div class="docstring">
+  <div class="discussion">
+    <p>UCD Derived names file location</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><a href="https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedName.txt" target="_parent" title="https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedName.txt">https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedName.txt</a></li>
+    
+  </ul>
+
+</div>
+        </dt>
+        <dd><pre class="code"><span style="color:#036;font-weight:bold">File</span>.join(__dir__, <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">../../data/DerivedName.txt</span><span style="color:#710">'</span></span>)</pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#regrep-class_method" title="regrep (class method)">.<strong>regrep</strong>(regexp)  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Search code points by (Ruby) regexp.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#regrep_display-class_method" title="regrep_display (class method)">.<strong>regrep_display</strong>(regexp)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Display a CLI-friendly output listing all code points corresponding to a regular expression.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#regrep_display_slow-class_method" title="regrep_display_slow (class method)">.<strong>regrep_display_slow</strong>(regexp)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Display a CLI-friendly output listing all code points corresponding to a regular expression.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#regrep_slow-class_method" title="regrep_slow (class method)">.<strong>regrep_slow</strong>(regexp)  &#x21d2; Array&lt;Hash&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Search code points by (Ruby) regexp.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ucd_derivedname_version-class_method" title="ucd_derivedname_version (class method)">.<strong>ucd_derivedname_version</strong>  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Returns the version of Unicode used in UCD local file (data/DerivedName.txt).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="regrep-class_method">
+  
+    .<strong>regrep</strong>(regexp)  &#x21d2; <tt>Array&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Search code points by (Ruby) regexp</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Rugrep</span>.regrep(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">snowman|snowflake</span><span style="color:#710">'</span></span>)
+<span style="color:#777"># =&gt;</span>
+<span style="color:#777"># [{:char=&gt;&quot;☃&quot;, :codepoint=&gt;9731, :name=&gt;&quot;SNOWMAN&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;⛄&quot;, :codepoint=&gt;9924, :name=&gt;&quot;SNOWMAN WITHOUT SNOW&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;⛇&quot;, :codepoint=&gt;9927, :name=&gt;&quot;BLACK SNOWMAN&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;❄&quot;, :codepoint=&gt;10052, :name=&gt;&quot;SNOWFLAKE&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;❅&quot;, :codepoint=&gt;10053, :name=&gt;&quot;TIGHT TRIFOLIATE SNOWFLAKE&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;❆&quot;, :codepoint=&gt;10054, :name=&gt;&quot;HEAVY CHEVRON SNOWFLAKE&quot;}]</span>
+<span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Rugrep</span>.regrep(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">greek small letter </span><span style="color:#D20">\w</span><span style="color:#D20">+</span><span style="color:#710">'</span></span>)
+<span style="color:#777"># =&gt;</span>
+<span style="color:#777"># [{:char=&gt;&quot;ͱ&quot;, :codepoint=&gt;881, :name=&gt;&quot;GREEK SMALL LETTER HETA&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;ͳ&quot;, :codepoint=&gt;883, :name=&gt;&quot;GREEK SMALL LETTER ARCHAIC SAMPI&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;ͷ&quot;, :codepoint=&gt;887, :name=&gt;&quot;GREEK SMALL LETTER PAMPHYLIAN DIGAMMA&quot;},</span>
+<span style="color:#777">#  …]</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>regexp</span>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Regular expression without delimiters or modifiers.
+Supports everything Ruby Regexp supports</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array of code points (<code>{char: String, codepoint: Integer, name: String}</code>)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/unisec/rugrep.rb', line 32</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">regrep</span>(regexp)
+  out = []
+  file = <span style="color:#036;font-weight:bold">File</span>.new(<span style="color:#036;font-weight:bold">UCD_DERIVEDNAME</span>)
+  file.each_line(<span style="color:#606">chomp</span>: <span style="color:#069">true</span>) <span style="color:#080;font-weight:bold">do</span> |line|
+    <span style="color:#777"># Skip if the line is empty or a comment</span>
+    <span style="color:#080;font-weight:bold">next</span> <span style="color:#080;font-weight:bold">if</span> line.empty? || line[<span style="color:#00D">0</span>] == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">#</span><span style="color:#710">'</span></span>
+
+    <span style="color:#777"># parse the line to extract code point as integer and the name</span>
+    cp_int, name = line.split(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">;</span><span style="color:#710">'</span></span>)
+    cp_int = cp_int.chomp.to_i(<span style="color:#00D">16</span>)
+    name.lstrip!
+    <span style="color:#080;font-weight:bold">next</span> <span style="color:#080;font-weight:bold">unless</span> <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>regexp<span style="font-weight:bold;color:#666">}</span></span><span style="color:#404">/</span><span style="color:#C2C">i</span></span>.match?(name) <span style="color:#777"># compiling regexp once is surprisingly not faster</span>
+
+    out &lt;&lt; {
+      <span style="color:#606">char</span>: <span style="color:#036;font-weight:bold">TwitterCldr</span>::<span style="color:#036;font-weight:bold">Utils</span>::<span style="color:#036;font-weight:bold">CodePoints</span>.to_string([cp_int]),
+      <span style="color:#606">codepoint</span>: cp_int,
+      <span style="color:#606">name</span>: name
+    }
+  <span style="color:#080;font-weight:bold">end</span>
+  out
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="regrep_display-class_method">
+  
+    .<strong>regrep_display</strong>(regexp)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Display a CLI-friendly output listing all code points corresponding to a regular expression.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Rugrep</span>.regrep_display(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">snowman|snowflake</span><span style="color:#710">'</span></span>)
+<span style="color:#777"># =&gt;</span>
+<span style="color:#777"># U+2603  ☃    SNOWMAN</span>
+<span style="color:#777"># U+26C4  ⛄    SNOWMAN WITHOUT SNOW</span>
+<span style="color:#777"># U+26C7  ⛇    BLACK SNOWMAN</span>
+<span style="color:#777"># U+2744  ❄    SNOWFLAKE</span>
+<span style="color:#777"># U+2745  ❅    TIGHT TRIFOLIATE SNOWFLAKE</span>
+<span style="color:#777"># U+2746  ❆    HEAVY CHEVRON SNOWFLAKE</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/unisec/rugrep.rb', line 64</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">regrep_display</span>(regexp)
+  codepoints = regrep(regexp)
+  codepoints.each <span style="color:#080;font-weight:bold">do</span> |cp|
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#036;font-weight:bold">Properties</span>.deccp2stdhexcp(cp[<span style="color:#A60">:codepoint</span>]).ljust(<span style="color:#00D">7</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:char</span>].ljust(<span style="color:#00D">4</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:name</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="regrep_display_slow-class_method">
+  
+    .<strong>regrep_display_slow</strong>(regexp)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Display a CLI-friendly output listing all code points corresponding to a regular expression.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Rugrep</span>.regrep_display_slow(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">snowman|snowflake</span><span style="color:#710">'</span></span>)
+<span style="color:#777"># =&gt;</span>
+<span style="color:#777"># U+2603  ☃    SNOWMAN</span>
+<span style="color:#777"># U+26C4  ⛄    SNOWMAN WITHOUT SNOW</span>
+<span style="color:#777"># U+26C7  ⛇    BLACK SNOWMAN</span>
+<span style="color:#777"># U+2744  ❄    SNOWFLAKE</span>
+<span style="color:#777"># U+2745  ❅    TIGHT TRIFOLIATE SNOWFLAKE</span>
+<span style="color:#777"># U+2746  ❆    HEAVY CHEVRON SNOWFLAKE</span></code></pre>
+    
+  </div>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/unisec/rugrep.rb', line 118</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">regrep_display_slow</span>(regexp)
+  codepoints = regrep_slow(regexp)
+  codepoints.each <span style="color:#080;font-weight:bold">do</span> |cp|
+    puts <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span><span style="color:#036;font-weight:bold">Properties</span>.deccp2stdhexcp(cp[<span style="color:#A60">:codepoint</span>]).ljust(<span style="color:#00D">7</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:char</span>].ljust(<span style="color:#00D">4</span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>cp[<span style="color:#A60">:name</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span>
+  <span style="color:#080;font-weight:bold">end</span>
+  <span style="color:#069">nil</span>
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="regrep_slow-class_method">
+  
+    .<strong>regrep_slow</strong>(regexp)  &#x21d2; <tt>Array&lt;Hash&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+  <div class="note notetag">
+    <strong>Note:</strong>
+    <div class='inline'><p>⚠ This command is very time consuming (~ 1min) and unoptimized (execute one regexp per code point…)</p>
+</div>
+  </div>
+
+<p>Search code points by (Ruby) regexp</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Rugrep</span>.regrep_slow(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">snowman|snowflake</span><span style="color:#710">'</span></span>)
+<span style="color:#777"># =&gt;</span>
+<span style="color:#777"># [{:char=&gt;&quot;☃&quot;, :codepoint=&gt;9731, :name=&gt;&quot;SNOWMAN&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;⛄&quot;, :codepoint=&gt;9924, :name=&gt;&quot;SNOWMAN WITHOUT SNOW&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;⛇&quot;, :codepoint=&gt;9927, :name=&gt;&quot;BLACK SNOWMAN&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;❄&quot;, :codepoint=&gt;10052, :name=&gt;&quot;SNOWFLAKE&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;❅&quot;, :codepoint=&gt;10053, :name=&gt;&quot;TIGHT TRIFOLIATE SNOWFLAKE&quot;},</span>
+<span style="color:#777">#  {:char=&gt;&quot;❆&quot;, :codepoint=&gt;10054, :name=&gt;&quot;HEAVY CHEVRON SNOWFLAKE&quot;}]</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>regexp</span>
+      
+      
+        <span class='type'>(<tt>Regexp</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Regular expression without delimiters or modifiers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Hash&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Array of code points (<code>{char: String, codepoint: Integer, name: String}</code>)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/unisec/rugrep.rb', line 94</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">regrep_slow</span>(regexp)
+  out = []
+  <span style="color:#036;font-weight:bold">TwitterCldr</span>::<span style="color:#036;font-weight:bold">Shared</span>::<span style="color:#036;font-weight:bold">CodePoint</span>.each <span style="color:#080;font-weight:bold">do</span> |cp|
+    <span style="color:#080;font-weight:bold">next</span> <span style="color:#080;font-weight:bold">unless</span> <span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>regexp<span style="font-weight:bold;color:#666">}</span></span><span style="color:#404">/</span><span style="color:#C2C">oi</span></span>.match?(cp.name) <span style="color:#777"># compiling regexp once is surprisingly not faster</span>
+
+    out &lt;&lt; {
+      <span style="color:#606">char</span>: <span style="color:#036;font-weight:bold">TwitterCldr</span>::<span style="color:#036;font-weight:bold">Utils</span>::<span style="color:#036;font-weight:bold">CodePoints</span>.to_string([cp.code_point]),
+      <span style="color:#606">codepoint</span>: cp.code_point,
+      <span style="color:#606">name</span>: cp.name
+    }
+  <span style="color:#080;font-weight:bold">end</span>
+  out
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ucd_derivedname_version-class_method">
+  
+    .<strong>ucd_derivedname_version</strong>  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Returns the version of Unicode used in UCD local file (data/DerivedName.txt)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Rugrep</span>.ucd_derivedname_version <span style="color:#777"># =&gt; &quot;15.1.0&quot;</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>Unicode version</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/unisec/rugrep.rb', line 76</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">ucd_derivedname_version</span>
+  first_line = <span style="color:#036;font-weight:bold">File</span>.open(<span style="color:#036;font-weight:bold">UCD_DERIVEDNAME</span>, &amp;<span style="color:#A60">:readline</span>)
+  first_line.match(<span style="background-color:hsla(300,100%,50%,0.06)"><span style="color:#404">/</span><span style="color:#808">-(</span><span style="color:#D20">\d</span><span style="color:#808">+</span><span style="color:#D20">\.</span><span style="color:#D20">\d</span><span style="color:#808">+</span><span style="color:#D20">\.</span><span style="color:#D20">\d</span><span style="color:#808">+)</span><span style="color:#D20">\.</span><span style="color:#808">txt</span><span style="color:#404">/</span></span>).captures.first
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Wed Oct 18 17:02:21 2023 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.34 (ruby-3.2.2).
+</div>
+
+    </div>
+  </body>
+</html>

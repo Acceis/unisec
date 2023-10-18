@@ -50,7 +50,7 @@ module Unisec
     def self.codepoints_display(prop)
       codepoints = Properties.codepoints(prop)
       codepoints.each do |cp|
-        puts "#{Properties.char2codepoint(cp[:char]).ljust(7)} #{cp[:char].ljust(4)} #{cp[:name]}"
+        puts "#{Properties.deccp2stdhexcp(cp[:codepoint]).ljust(7)} #{cp[:char].ljust(4)} #{cp[:name]}"
       end
       nil
     end
@@ -158,7 +158,7 @@ module Unisec
     # @example
     #   Unisec::Properties.char2codepoint('💎') # => "U+1F48E"
     def self.char2codepoint(chr)
-      "U+#{format('%.4x', chr.codepoints.first).upcase}"
+      Properties.deccp2stdhexcp(chr.codepoints.first)
     end
 
     # Display the code points in Unicode format for the given characters (code points as string)
@@ -173,6 +173,15 @@ module Unisec
         out << Properties.char2codepoint(chr)
       end
       out.join(' ')
+    end
+
+    # Convert from decimal code point to standardized format hexadecimal code point
+    # @param int_cp [Integer] Code point in decimal format
+    # @return [String] code point in Unicode format
+    # @example
+    #   Unisec::Properties.intcp2stdhexcp(128640) # => "U+1F680"
+    def self.deccp2stdhexcp(int_cp)
+      "U+#{format('%.4x', int_cp).upcase}"
     end
   end
 end

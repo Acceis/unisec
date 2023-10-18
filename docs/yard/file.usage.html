@@ -64,9 +64,12 @@
 <pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> unisec --help
 <span style="color:#606">Commands</span>:
   unisec confusables [<span style="color:#036;font-weight:bold">SUBCOMMAND</span>]
+  unisec grep <span style="color:#036;font-weight:bold">REGEXP</span>                              <span style="color:#777"># Search for Unicode code point names by regular expression</span>
   unisec hexdump <span style="color:#036;font-weight:bold">INPUT</span>                            <span style="color:#777"># Hexdump in all Unicode encodings</span>
   unisec properties [<span style="color:#036;font-weight:bold">SUBCOMMAND</span>]
+  unisec size <span style="color:#036;font-weight:bold">INPUT</span>                               <span style="color:#777"># All kinf of size information about a Unicode string</span>
   unisec surrogates [<span style="color:#036;font-weight:bold">SUBCOMMAND</span>]
+  unisec versions                                 <span style="color:#777"># Version of anything related to Unicode as used in unisec</span>
 </code></pre>
 <p>List sub-commands:</p>
 <pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> unisec surrogates --help
@@ -100,6 +103,7 @@
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/Randomize">Randomize</a></li>
 </ul>
 </li>
+<li><a href="https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Grep">Grep</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Hexdump">Hexdump</a></li>
 <li><strong>Properties</strong>
 <ul>
@@ -123,7 +127,8 @@
 <ul>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Confusables">Unisec::Confusables</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Hexdump">Unisec::Hexdump</a></li>
-<li><a href="https://acceis.github.io/unisec/yard/Unisec/Properties">Unisec::Properties</a></li>
+<li><a href="https://acceis.github.io/unisec/yard/Unisec/Properties">Unisec::Properties</a>
+<a href="https://acceis.github.io/unisec/yard/Unisec/Rugrep">Unisec::Rugrep</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Size">Unisec::Size</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Surrogates">Unisec::Surrogates</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Versions">Unisec::Versions</a></li>
@@ -131,9 +136,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Fri Aug 18 09:49:54 2023 by
+  Generated on Wed Oct 18 17:02:20 2023 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.0).
+  0.9.34 (ruby-3.2.2).
 </div>
 
     </div>

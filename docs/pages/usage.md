@@ -10,9 +10,12 @@ List commands:
 $ unisec --help
 Commands:
   unisec confusables [SUBCOMMAND]
+  unisec grep REGEXP                              # Search for Unicode code point names by regular expression
   unisec hexdump INPUT                            # Hexdump in all Unicode encodings
   unisec properties [SUBCOMMAND]
+  unisec size INPUT                               # All kinf of size information about a Unicode string
   unisec surrogates [SUBCOMMAND]
+  unisec versions                                 # Version of anything related to Unicode as used in unisec
 ```
 
 List sub-commands:
@@ -50,6 +53,7 @@ Options:
 - **Confusables**
   - [List](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/List)
   - [Randomize](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/Randomize)
+- [Grep](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Grep)
 - [Hexdump](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Hexdump)
 - **Properties**
   - [Char](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/Char)
@@ -70,6 +74,7 @@ See examples in [the library documentation](https://acceis.github.io/unisec/yard
 - [Unisec::Confusables](https://acceis.github.io/unisec/yard/Unisec/Confusables)
 - [Unisec::Hexdump](https://acceis.github.io/unisec/yard/Unisec/Hexdump)
 - [Unisec::Properties](https://acceis.github.io/unisec/yard/Unisec/Properties)
+   [Unisec::Rugrep](https://acceis.github.io/unisec/yard/Unisec/Rugrep)
 - [Unisec::Size](https://acceis.github.io/unisec/yard/Unisec/Size)
 - [Unisec::Surrogates](https://acceis.github.io/unisec/yard/Unisec/Surrogates)
 - [Unisec::Versions](https://acceis.github.io/unisec/yard/Unisec/Versions)

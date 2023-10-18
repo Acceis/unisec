@@ -27,12 +27,14 @@ A CLI tool and library to play with Unicode security.
   - Get all properties of a given Unicode character
   - List code points matching a Unicode property
   - List all Unicode properties name
+- **Regexp search**
+  - Search for Unicode code point names by regular expression
 - **Size**
   - Code point, grapheme, UTF-8/UTF-16/UTF-32 byte/unit size
 - **Surrogates**
   - Code point ↔️ Surrogates conversion
 - **Versions**
-  - Version of Unicode, ICU, CLDR, gems used in Unisec
+  - Version of Unicode, ICU, CLDR, UCD, gems used in Unisec
 
 ## Installation
 
