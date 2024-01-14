@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = ['>= 3.0.0', '< 4.0']
 
-  s.add_runtime_dependency('ctf-party', '~> 2.3') # string conversion
+  s.add_runtime_dependency('ctf-party', '>= 2.3', '< 4.0') # string conversion
   s.add_runtime_dependency('dry-cli', '~> 1.0') # CLI
   s.add_runtime_dependency('paint', '~> 2.3') # colorized output
   s.add_runtime_dependency('twitter_cldr', '~> 6.11', '>= 6.11.5') # ICU / CLDR
