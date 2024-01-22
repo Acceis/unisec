@@ -98,6 +98,16 @@ module Unisec
           :string
         end
       end
+
+      # Reverse a string by graphemes (not by code points)
+      # @return [String] the reversed string
+      # @example
+      #   b = "\u{1f1eb}\u{1f1f7}\u{1F413}" # => "🇫🇷🐓"
+      #   b.reverse # => "🐓🇷🇫"
+      #   Unisec::Utils::String.grapheme_reverse(b) # => "🐓🇫🇷"
+      def self.grapheme_reverse(str)
+        str.grapheme_clusters.reverse.join
+      end
     end
   end
 end

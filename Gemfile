@@ -13,7 +13,7 @@ end
 
 # Needed for the CLI & library
 group :runtime, :all do
-  gem 'ctf-party', '~> 2.3' # string conversion
+  gem 'ctf-party', '~> 3.0' # string conversion
   gem 'twitter_cldr', '~> 6.12' # ICU / CLDR
   gem 'unicode-confusable', '~> 1.10' # confusable chars
 end

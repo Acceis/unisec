@@ -18,6 +18,8 @@ A CLI tool and library to play with Unicode security.
 
 ## Features
 
+- **BiDi spoofing**
+  - Craft payloads for attack using BiDi code points (e.g. spoofing a domain name or a file name)
 - **Confusables / homoglyphs**
   - List confusables characters for a given character
   - Replace all characters from a string with random confusables

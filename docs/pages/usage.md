@@ -9,6 +9,7 @@ List commands:
 ```
 $ unisec --help
 Commands:
+  unisec bidi [SUBCOMMAND]
   unisec confusables [SUBCOMMAND]
   unisec grep REGEXP                              # Search for Unicode code point names by regular expression
   unisec hexdump INPUT                            # Hexdump in all Unicode encodings
@@ -50,6 +51,8 @@ Options:
 
 ### Examples
 
+- **BiDi**
+  - [Spoof](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Bidi/Spoof)
 - **Confusables**
   - [List](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/List)
   - [Randomize](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/Randomize)
@@ -71,10 +74,11 @@ Options:
 
 See examples in [the library documentation](https://acceis.github.io/unisec/yard/Unisec).
 
+- [Unisec::Bidi](https://acceis.github.io/unisec/yard/Unisec/Bidi)
 - [Unisec::Confusables](https://acceis.github.io/unisec/yard/Unisec/Confusables)
 - [Unisec::Hexdump](https://acceis.github.io/unisec/yard/Unisec/Hexdump)
 - [Unisec::Properties](https://acceis.github.io/unisec/yard/Unisec/Properties)
-   [Unisec::Rugrep](https://acceis.github.io/unisec/yard/Unisec/Rugrep)
+- [Unisec::Rugrep](https://acceis.github.io/unisec/yard/Unisec/Rugrep)
 - [Unisec::Size](https://acceis.github.io/unisec/yard/Unisec/Size)
 - [Unisec::Surrogates](https://acceis.github.io/unisec/yard/Unisec/Surrogates)
 - [Unisec::Versions](https://acceis.github.io/unisec/yard/Unisec/Versions)

@@ -10,6 +10,9 @@ AllCops:
 Layout/HashAlignment:
   Exclude:
     - '*.gemspec'
+Layout/LineLength:
+  AllowedPatterns:
+    - !ruby/regexp /\A\s*# /
 Lint/MissingSuper:
   Exclude:
     - 'lib/tls_map/cli/cli.rb'

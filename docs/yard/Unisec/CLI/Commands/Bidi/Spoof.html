@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Unisec::CLI::Commands::Confusables::List
+  Class: Unisec::CLI::Commands::Bidi::Spoof
   
     &mdash; Documentation by YARD 0.9.34
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../../../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "Unisec::CLI::Commands::Confusables::List";
+  pathId = "Unisec::CLI::Commands::Bidi::Spoof";
   relpath = '../../../../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../../../../_index.html">Index (L)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../../../Unisec.html" title="Unisec (module)">Unisec</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CLI.html" title="Unisec::CLI (module)">CLI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Commands.html" title="Unisec::CLI::Commands (module)">Commands</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Confusables.html" title="Unisec::CLI::Commands::Confusables (module)">Confusables</a></span></span>
+    <a href="../../../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../Unisec.html" title="Unisec (module)">Unisec</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CLI.html" title="Unisec::CLI (module)">CLI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Commands.html" title="Unisec::CLI::Commands (module)">Commands</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Bidi.html" title="Unisec::CLI::Commands::Bidi (module)">Bidi</a></span></span>
      &raquo; 
-    <span class="title">List</span>
+    <span class="title">Spoof</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Unisec::CLI::Commands::Confusables::List
+      <div id="content"><h1>Class: Unisec::CLI::Commands::Bidi::Spoof
   
   
   
@@ -76,7 +76,7 @@
           
             <li class="next">Dry::CLI::Command</li>
           
-            <li class="next">Unisec::CLI::Commands::Confusables::List</li>
+            <li class="next">Unisec::CLI::Commands::Bidi::Spoof</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,19 +96,32 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/unisec/cli/confusables.rb</dd>
+    <dd>lib/unisec/cli/bidi.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Command <code>unisec confusables list</code></p>
+    <p>Command <code>unisec bidi spoof</code></p>
 <p>Example:</p>
-<pre class="code plaintext"><code class="plaintext">$ unisec confusables list &#39;!&#39;
-U+FF01    ！    FULLWIDTH EXCLAMATION MARK
-U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
-…
+<pre class="code plaintext"><code class="plaintext">$ unisec bidi spoof noraj
+Target string: noraj
+Spoof payload (display) ⚠: ‮jaron‬
+Spoof string 🛈: jaron
+Spoof payload (hex): e280ae6a61726f6ee280ac
+Spoof payload (hex, escaped): \xe2\x80\xae\x6a\x61\x72\x6f\x6e\xe2\x80\xac
+Spoof payload (base64): 4oCuamFyb27igKw=
+Spoof payload (urlencode): %E2%80%AEjaron%E2%80%AC
+Spoof payload (code points): U+202E U+006A U+0061 U+0072 U+006F U+006E U+202C
+
+
+
+⚠: for the spoof payload to display correctly, be sure your VTE has RTL support, e.g. see https://wiki.archlinux.org/title/Bidirectional_text#Terminal.
+🛈: Does not contain the BiDi character (e.g. RtLO).
+
+$ unisec bidi spoof &#39;document_annexe.txt&#39; --prefix &#39;&#39; --suffix &#39;&#39; --infix-bidi $&#39;\U202E&#39; --infix-pos 12 --light=true
+document_ann‮txt.exe
 </code></pre>
 
 
@@ -135,7 +148,7 @@ U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(character: nil, **options)  &#x21d2; Object </a>
+      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(input: nil, **options)  &#x21d2; Object </a>
     
 
     
@@ -149,7 +162,7 @@ U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
   
 
   
-    <span class="summary_desc"><div class='inline'><p>List confusables characters for a given character.</p>
+    <span class="summary_desc"><div class='inline'><p>Craft a payload for BiDi attacks.</p>
 </div></span>
   
 </li>
@@ -168,7 +181,7 @@ U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
       <div class="method_details first">
   <h3 class="signature first" id="call-instance_method">
   
-    #<strong>call</strong>(character: nil, **options)  &#x21d2; <tt>Object</tt> 
+    #<strong>call</strong>(input: nil, **options)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -176,7 +189,7 @@ U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>List confusables characters for a given character</p>
+    <p>Craft a payload for BiDi attacks</p>
 
 
   </div>
@@ -187,7 +200,7 @@ U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
   
     <li>
       
-        <span class='name'>character</span>
+        <span class='name'>input</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -197,7 +210,7 @@ U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
       
       
         &mdash;
-        <div class='inline'><p>the character to search confusables for</p>
+        <div class='inline'><p>Input string to spoof</p>
 </div>
       
     </li>
@@ -212,36 +225,12 @@ U+01C3    ǃ    LATIN LETTER RETROFLEX CLICK
       
       
         &mdash;
-        <div class='inline'><p>a customizable set of options</p>
+        <div class='inline'><p>optional parameters, see <span class='object_link'><a href="../../../Bidi/Spoof.html#bidi_affix-class_method" title="Unisec::Bidi::Spoof.bidi_affix (method)">Bidi::Spoof.bidi_affix</a></span></p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>**options</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">:map</span>
-          <span class="type">(<tt>Boolean</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>allows partial mapping, includes confusable where the given chart is a
-part of</p>
-</div>
-          
-        </li>
-      
-    </ul>
-  
 
 
 </div><table class="source_code">
@@ -250,17 +239,25 @@ part of</p>
       <pre class="lines">
 
 
-33
-34
-35
-36</pre>
+51
+52
+53
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/cli/confusables.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/cli/bidi.rb', line 51</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">character</span>: <span style="color:#069">nil</span>, **options)
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">input</span>: <span style="color:#069">nil</span>, **options)
   to_bool = -&gt;(str) { [<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">true</span><span style="color:#710">'</span></span>, <span style="color:#069">true</span>].include?(str) }
-  <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Confusables</span>.list_display(character, <span style="color:#606">map</span>: to_bool.call(options.fetch(<span style="color:#A60">:map</span>)))
+  light = to_bool.call(options.fetch(<span style="color:#A60">:light</span>))
+  infix_pos = options[<span style="color:#A60">:infix_pos</span>].to_i <span style="color:#080;font-weight:bold">unless</span> options[<span style="color:#A60">:infix_pos</span>].nil?
+  puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Bidi</span>::<span style="color:#036;font-weight:bold">Spoof</span>.new(input, <span style="color:#606">prefix</span>: options[<span style="color:#A60">:prefix</span>], <span style="color:#606">suffix</span>: options[<span style="color:#A60">:suffix</span>],
+                                      <span style="color:#606">infix_bidi</span>: options[<span style="color:#A60">:infix_bidi</span>],
+                                      <span style="color:#606">infix_pos</span>: infix_pos).display(<span style="color:#606">light</span>: light)
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>

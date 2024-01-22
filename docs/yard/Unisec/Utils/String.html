@@ -177,6 +177,29 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#grapheme_reverse-class_method" title="grapheme_reverse (class method)">.<strong>grapheme_reverse</strong>(str)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>Reverse a string by graphemes (not by code points).</p>
+</div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -518,14 +541,81 @@ automatically based on the prefix.</p>
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="grapheme_reverse-class_method">
+  
+    .<strong>grapheme_reverse</strong>(str)  &#x21d2; <tt><span class='object_link'><a href="" title="Unisec::Utils::String (module)">String</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>Reverse a string by graphemes (not by code points)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>b = <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\u</span><span style="color:#D20">{1f1eb}</span><span style="color:#b0b">\u</span><span style="color:#D20">{1f1f7}</span><span style="color:#b0b">\u</span><span style="color:#D20">{1F413}</span><span style="color:#710">&quot;</span></span> <span style="color:#777"># =&gt; &quot;🇫🇷🐓&quot;</span>
+b.reverse <span style="color:#777"># =&gt; &quot;🐓🇷🇫&quot;</span>
+<span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Utils</span>::<span style="color:#036;font-weight:bold">String</span>.grapheme_reverse(b) <span style="color:#777"># =&gt; &quot;🐓🇫🇷&quot;</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="" title="Unisec::Utils::String (module)">String</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>the reversed string</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/unisec/utils.rb', line 108</span>
+
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">grapheme_reverse</span>(str)
+  str.grapheme_clusters.reverse.join
+<span style="color:#080;font-weight:bold">end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Wed Oct 18 17:02:20 2023 by
+  Generated on Mon Jan 22 18:11:32 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

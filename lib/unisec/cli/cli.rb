@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'unisec/cli/bidi'
 require 'unisec/cli/confusables'
 require 'unisec/cli/hexdump'
 require 'unisec/cli/properties'
@@ -17,6 +18,7 @@ module Unisec
 
       # Mapping between the (sub-)commands as seen by the user
       # on the command-line interface and the CLI modules in the lib
+      register 'bidi spoof', Bidi::Spoof
       register 'confusables list', Confusables::List
       register 'confusables randomize', Confusables::Randomize
       register 'grep', Grep

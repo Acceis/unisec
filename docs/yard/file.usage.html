@@ -63,6 +63,7 @@
 <p>List commands:</p>
 <pre class="code ruby"><code class="ruby"><span style="color:#F00;background-color:#FAA">$</span> unisec --help
 <span style="color:#606">Commands</span>:
+  unisec bidi [<span style="color:#036;font-weight:bold">SUBCOMMAND</span>]
   unisec confusables [<span style="color:#036;font-weight:bold">SUBCOMMAND</span>]
   unisec grep <span style="color:#036;font-weight:bold">REGEXP</span>                              <span style="color:#777"># Search for Unicode code point names by regular expression</span>
   unisec hexdump <span style="color:#036;font-weight:bold">INPUT</span>                            <span style="color:#777"># Hexdump in all Unicode encodings</span>
@@ -97,6 +98,11 @@
 </code></pre>
 <h3>Examples</h3>
 <ul>
+<li><strong>BiDi</strong>
+<ul>
+<li><a href="https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Bidi/Spoof">Spoof</a></li>
+</ul>
+</li>
 <li><strong>Confusables</strong>
 <ul>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/List">List</a></li>
@@ -125,10 +131,11 @@
 <h2>Library</h2>
 <p>See examples in <a href="https://acceis.github.io/unisec/yard/Unisec">the library documentation</a>.</p>
 <ul>
+<li><a href="https://acceis.github.io/unisec/yard/Unisec/Bidi">Unisec::Bidi</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Confusables">Unisec::Confusables</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Hexdump">Unisec::Hexdump</a></li>
-<li><a href="https://acceis.github.io/unisec/yard/Unisec/Properties">Unisec::Properties</a>
-<a href="https://acceis.github.io/unisec/yard/Unisec/Rugrep">Unisec::Rugrep</a></li>
+<li><a href="https://acceis.github.io/unisec/yard/Unisec/Properties">Unisec::Properties</a></li>
+<li><a href="https://acceis.github.io/unisec/yard/Unisec/Rugrep">Unisec::Rugrep</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Size">Unisec::Size</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Surrogates">Unisec::Surrogates</a></li>
 <li><a href="https://acceis.github.io/unisec/yard/Unisec/Versions">Unisec::Versions</a></li>
@@ -136,9 +143,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Wed Oct 18 17:02:20 2023 by
+  Generated on Mon Jan 22 18:11:32 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.2.2).
+  0.9.34 (ruby-3.3.0).
 </div>
 
     </div>

@@ -1,5 +1,12 @@
 ## [unreleased]
 
+## [0.0.4]
+
+**Features**
+
+- Add a new class `Unisec::Bidi::Spoof` and CLI command `bidi spoof` to craft payloads for attack using BiDi code points like RtLO, for example, for spoofing a domain name or a file name
+- Add a new helper method: `Unisec::Utils::String.grapheme_reverse`: Reverse a string by graphemes (not by code points)
+
 ## [0.0.3]
 
 **Features**
