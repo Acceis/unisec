@@ -137,7 +137,7 @@ UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(input: nil)  &#x21d2; Object </a>
+      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(input: nil, **options)  &#x21d2; Object </a>
     
 
     
@@ -170,7 +170,7 @@ UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
       <div class="method_details first">
   <h3 class="signature first" id="call-instance_method">
   
-    #<strong>call</strong>(input: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>call</strong>(input: nil, **options)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -213,15 +213,27 @@ UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
       <pre class="lines">
 
 
-29
-30
-31</pre>
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/cli/hexdump.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/cli/hexdump.rb', line 32</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">input</span>: <span style="color:#069">nil</span>, **)
-  puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Hexdump</span>.new(input).display
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">input</span>: <span style="color:#069">nil</span>, **options)
+  input = <span style="color:#d70">$stdin</span>.read.chomp <span style="color:#080;font-weight:bold">if</span> input == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">-</span><span style="color:#710">'</span></span>
+  <span style="color:#080;font-weight:bold">if</span> options[<span style="color:#A60">:enc</span>].nil?
+    puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Hexdump</span>.new(input).display
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#777"># using send() is safe here thanks to the value whitelist</span>
+    puts puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Hexdump</span>.send(options[<span style="color:#A60">:enc</span>], input)
+  <span style="color:#080;font-weight:bold">end</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -233,7 +245,7 @@ UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
 </div>
 
       <div id="footer">
-  Generated on Mon Jan 22 18:11:32 2024 by
+  Generated on Tue Jan 23 10:38:47 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

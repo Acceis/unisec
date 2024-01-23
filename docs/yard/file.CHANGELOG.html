@@ -63,6 +63,8 @@
 <ul>
 <li>Add a new class <code>Unisec::Bidi::Spoof</code> and CLI command <code>bidi spoof</code> to craft payloads for attack using BiDi code points like RtLO, for example, for spoofing a domain name or a file name</li>
 <li>Add a new helper method: <code>Unisec::Utils::String.grapheme_reverse</code>: Reverse a string by graphemes (not by code points)</li>
+<li>Add an <code>--enc</code> option for <code>unisec hexdump</code> to output only in the specified encoding</li>
+<li><code>unisec hexdump</code> can now read from STDIN if the input equals to <code>-</code></li>
 </ul>
 <h2>[0.0.3]</h2>
 <p><strong>Features</strong></p>
@@ -91,7 +93,7 @@
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jan 22 18:11:32 2024 by
+  Generated on Tue Jan 23 10:38:46 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

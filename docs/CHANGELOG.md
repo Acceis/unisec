@@ -6,6 +6,8 @@
 
 - Add a new class `Unisec::Bidi::Spoof` and CLI command `bidi spoof` to craft payloads for attack using BiDi code points like RtLO, for example, for spoofing a domain name or a file name
 - Add a new helper method: `Unisec::Utils::String.grapheme_reverse`: Reverse a string by graphemes (not by code points)
+- Add an `--enc` option for `unisec hexdump` to output only in the specified encoding
+- `unisec hexdump` can now read from STDIN if the input equals to `-`
 
 ## [0.0.3]
 

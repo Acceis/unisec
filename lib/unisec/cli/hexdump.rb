@@ -22,12 +22,21 @@ module Unisec
         desc 'Hexdump in all Unicode encodings'
 
         argument :input, required: true,
-                         desc: 'String input'
+                         desc: 'String input. Read from STDIN if equal to -.'
+
+        option :enc, default: nil, values: %w[utf8 utf16be utf16le utf32be utf32le],
+                     desc: 'Output only in the specified encoding.'
 
         # Hexdump of all Unicode encodings.
         # @param input [String] Input string to encode
-        def call(input: nil, **)
-          puts Unisec::Hexdump.new(input).display
+        def call(input: nil, **options)
+          input = $stdin.read.chomp if input == '-'
+          if options[:enc].nil?
+            puts Unisec::Hexdump.new(input).display
+          else
+            # using send() is safe here thanks to the value whitelist
+            puts puts Unisec::Hexdump.send(options[:enc], input)
+          end
         end
       end
     end
