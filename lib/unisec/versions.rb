@@ -72,19 +72,19 @@ module Unisec
     #   # …
     def self.display # rubocop:disable Metrics/AbcSize
       data = versions
-      display = ->(node) { puts Paint[data[node][:label], :red, :bold].ljust(44) + " #{data[node][:version]}" }
-      puts Paint['Unicode:', :underline]
-      display.call(:ruby_unicode)
-      display.call(:twittercldr_unicode)
-      display.call(:unicodeconfusable_unicode)
-      display.call(:twittercldr_icu)
-      display.call(:twittercldr_cldr)
-      display.call(:ruby_unicode_emoji)
-      display.call(:ucd_derivedname)
-      puts Paint["\nGems:", :underline]
-      display.call(:unisec)
-      display.call(:twittercldr)
-      display.call(:unicodeconfusable)
+      colorize = ->(node) { Paint[data[node][:label], :red, :bold].ljust(44) + " #{data[node][:version]}\n" }
+      Paint["Unicode:\n", :underline] +
+        colorize.call(:ruby_unicode) +
+        colorize.call(:twittercldr_unicode) +
+        colorize.call(:unicodeconfusable_unicode) +
+        colorize.call(:twittercldr_icu) +
+        colorize.call(:twittercldr_cldr) +
+        colorize.call(:ruby_unicode_emoji) +
+        colorize.call(:ucd_derivedname) +
+        Paint["\nGems:\n", :underline] +
+        colorize.call(:unisec) +
+        colorize.call(:twittercldr) +
+        colorize.call(:unicodeconfusable)
     end
   end
 end
