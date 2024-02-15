@@ -35,7 +35,7 @@ module Unisec
             puts Unisec::Hexdump.new(input).display
           else
             # using send() is safe here thanks to the value whitelist
-            puts puts Unisec::Hexdump.send(options[:enc], input)
+            puts Unisec::Hexdump.send(options[:enc], input)
           end
         end
       end
