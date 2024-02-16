@@ -102,6 +102,7 @@ module Unisec
     # Display a CLI-friendly output summurizing everithing about the surrogates:
     # the corresponding character, code point, high and low surrogates
     # (each displayed as hexadecimal, decimal and binary).
+    # @return [String] CLI-ready output
     # @example
     #   surr = Unisec::Surrogates.new(128169)
     #   puts surr.display # =>

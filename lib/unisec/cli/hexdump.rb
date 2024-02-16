@@ -17,6 +17,9 @@ module Unisec
       # UTF-16LE: 4100 4300 4300 4500 4900 5300
       # UTF-32BE: 00000041 00000043 00000043 00000045 00000049 00000053
       # UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
+      #
+      # $unisec hexdump "ACCEIS" --enc utf16le
+      # 4100 4300 4300 4500 4900 5300
       # ```
       class Hexdump < Dry::CLI::Command
         desc 'Hexdump in all Unicode encodings'
