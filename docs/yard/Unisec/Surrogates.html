@@ -317,7 +317,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#display-instance_method" title="#display (instance method)">#<strong>display</strong>  &#x21d2; Object </a>
+      <a href="#display-instance_method" title="#display (instance method)">#<strong>display</strong>  &#x21d2; String </a>
     
 
     
@@ -1034,7 +1034,7 @@ surr.code_point # =&gt; 128169</p>
       <div class="method_details ">
   <h3 class="signature " id="display-instance_method">
   
-    #<strong>display</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>display</strong>  &#x21d2; <tt>String</tt> 
   
 
   
@@ -1064,6 +1064,23 @@ puts surr.display <span style="color:#777"># =&gt;</span>
     
   </div>
 
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>CLI-ready output</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1071,15 +1088,15 @@ puts surr.display <span style="color:#777"># =&gt;</span>
       <pre class="lines">
 
 
-112
 113
 114
 115
 116
-117</pre>
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/surrogates.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/surrogates.rb', line 113</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">display</span>
   <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Char: </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>[<span style="color:#33B">@cp</span>].pack(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">U*</span><span style="color:#710">'</span></span>)<span style="font-weight:bold;color:#666">}</span></span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span> \
@@ -1229,7 +1246,7 @@ surr.low_surrogate <span style="color:#777"># =&gt; 56489</span></code></pre>
 </div>
 
       <div id="footer">
-  Generated on Tue Jan 23 10:38:47 2024 by
+  Generated on Fri Feb 16 11:14:39 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

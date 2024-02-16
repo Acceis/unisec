@@ -1,5 +1,16 @@
 ## [unreleased]
 
+## [0.0.5]
+
+**Features**
+
+- Add a new class `Unisec::Normalization` and CLI command `normalize` to output all normalization forms
+
+**Chore**
+
+- Enhance documentation
+- Dependencies update
+
 ## [0.0.4]
 
 **Features**

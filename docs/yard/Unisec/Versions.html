@@ -242,19 +242,19 @@
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#069">self</span>.<span style="color:#06B;font-weight:bold">display</span> <span style="color:#777"># rubocop:disable Metrics/AbcSize</span>
   data = versions
-  display = -&gt;(node) { puts <span style="color:#036;font-weight:bold">Paint</span>[data[node][<span style="color:#A60">:label</span>], <span style="color:#A60">:red</span>, <span style="color:#A60">:bold</span>].ljust(<span style="color:#00D">44</span>) + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>data[node][<span style="color:#A60">:version</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#710">&quot;</span></span> }
-  puts <span style="color:#036;font-weight:bold">Paint</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Unicode:</span><span style="color:#710">'</span></span>, <span style="color:#A60">:underline</span>]
-  display.call(<span style="color:#A60">:ruby_unicode</span>)
-  display.call(<span style="color:#A60">:twittercldr_unicode</span>)
-  display.call(<span style="color:#A60">:unicodeconfusable_unicode</span>)
-  display.call(<span style="color:#A60">:twittercldr_icu</span>)
-  display.call(<span style="color:#A60">:twittercldr_cldr</span>)
-  display.call(<span style="color:#A60">:ruby_unicode_emoji</span>)
-  display.call(<span style="color:#A60">:ucd_derivedname</span>)
-  puts <span style="color:#036;font-weight:bold">Paint</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#D20">Gems:</span><span style="color:#710">&quot;</span></span>, <span style="color:#A60">:underline</span>]
-  display.call(<span style="color:#A60">:unisec</span>)
-  display.call(<span style="color:#A60">:twittercldr</span>)
-  display.call(<span style="color:#A60">:unicodeconfusable</span>)
+  colorize = -&gt;(node) { <span style="color:#036;font-weight:bold">Paint</span>[data[node][<span style="color:#A60">:label</span>], <span style="color:#A60">:red</span>, <span style="color:#A60">:bold</span>].ljust(<span style="color:#00D">44</span>) + <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20"> </span><span style="background-color:hsla(0,0%,0%,0.07);color:black"><span style="font-weight:bold;color:#666">#{</span>data[node][<span style="color:#A60">:version</span>]<span style="font-weight:bold;color:#666">}</span></span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span> }
+  <span style="color:#036;font-weight:bold">Paint</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">Unicode:</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, <span style="color:#A60">:underline</span>] +
+    colorize.call(<span style="color:#A60">:ruby_unicode</span>) +
+    colorize.call(<span style="color:#A60">:twittercldr_unicode</span>) +
+    colorize.call(<span style="color:#A60">:unicodeconfusable_unicode</span>) +
+    colorize.call(<span style="color:#A60">:twittercldr_icu</span>) +
+    colorize.call(<span style="color:#A60">:twittercldr_cldr</span>) +
+    colorize.call(<span style="color:#A60">:ruby_unicode_emoji</span>) +
+    colorize.call(<span style="color:#A60">:ucd_derivedname</span>) +
+    <span style="color:#036;font-weight:bold">Paint</span>[<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#b0b">\n</span><span style="color:#D20">Gems:</span><span style="color:#b0b">\n</span><span style="color:#710">&quot;</span></span>, <span style="color:#A60">:underline</span>] +
+    colorize.call(<span style="color:#A60">:unisec</span>) +
+    colorize.call(<span style="color:#A60">:twittercldr</span>) +
+    colorize.call(<span style="color:#A60">:unicodeconfusable</span>)
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>
@@ -416,7 +416,7 @@
 </div>
 
       <div id="footer">
-  Generated on Tue Jan 23 10:38:47 2024 by
+  Generated on Fri Feb 16 11:14:39 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>

@@ -12,6 +12,14 @@ Also check the **linter**:
 $ bundle exec rubocop
 ```
 
+Update the version in `lib/unisec/version.rb`.
+
+Update the documentation, at least:
+
+- `README.md`
+- `docs/CHANGELOG.md`
+- `docs/pages/usage.md`
+
 On new release don't forget to rebuild the **library documentation**:
 
 ```
