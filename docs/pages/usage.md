@@ -58,6 +58,7 @@ Options:
   - [Randomize](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/Randomize)
 - [Grep](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Grep)
 - [Hexdump](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Hexdump)
+- [Normalize](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Normalize)
 - **Properties**
   - [Char](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/Char)
   - [Codepoints](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/Codepoints)
@@ -77,6 +78,7 @@ See examples in [the library documentation](https://acceis.github.io/unisec/yard
 - [Unisec::Bidi](https://acceis.github.io/unisec/yard/Unisec/Bidi)
 - [Unisec::Confusables](https://acceis.github.io/unisec/yard/Unisec/Confusables)
 - [Unisec::Hexdump](https://acceis.github.io/unisec/yard/Unisec/Hexdump)
+- [Unisec::Normalization](https://acceis.github.io/unisec/yard/Unisec/Normalization)
 - [Unisec::Properties](https://acceis.github.io/unisec/yard/Unisec/Properties)
 - [Unisec::Rugrep](https://acceis.github.io/unisec/yard/Unisec/Rugrep)
 - [Unisec::Size](https://acceis.github.io/unisec/yard/Unisec/Size)

@@ -25,6 +25,8 @@ A CLI tool and library to play with Unicode security.
   - Replace all characters from a string with random confusables
 - **Hexdump**
   - UTF-8, UTF-16, UTF-32 hexadecimal dumps
+- **Normalization**
+  - NFC, NFKC, NFD, NFKD normalization forms
 - **Properties**
   - Get all properties of a given Unicode character
   - List code points matching a Unicode property

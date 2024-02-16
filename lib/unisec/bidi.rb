@@ -129,6 +129,7 @@ module Unisec
       #
       # The light version displays only the spoof payload for easy piping with other commands.
       # @param light [Boolean] `true` = light display (displays only the spoof payload for easy piping with other commands), `false` (default) = full display.
+      # @return [String] CLI-ready output
       # @example
       #   puts Unisec::Bidi::Spoof.new('noraj').display
       #   # Target string: noraj

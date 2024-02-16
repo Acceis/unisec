@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.summary       = 'Unicode Security Toolkit'
   s.description   = 'Toolkit for security research manipulating Unicode: '
   s.description   += 'confusables, homoglyphs, hexdump, code point, UTF-8, UTF-16, UTF-32, properties, regexp search, '
-  s.description   += 'size, grapheme, surrogates, version, ICU, CLDR, UCD'
+  s.description   += 'size, grapheme, surrogates, version, ICU, CLDR, UCD, BiDi, normalization'
   s.authors       = ['Alexandre ZANNI']
   s.email         = 'alexandre.zanni@europe.com'
   s.homepage      = 'https://github.com/Acceis/unisec'

@@ -111,6 +111,9 @@ UTF-16BE: 0041 0043 0043 0045 0049 0053
 UTF-16LE: 4100 4300 4300 4500 4900 5300
 UTF-32BE: 00000041 00000043 00000043 00000045 00000049 00000053
 UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
+
+$unisec hexdump &quot;ACCEIS&quot; --enc utf16le
+4100 4300 4300 4500 4900 5300
 </code></pre>
 
 
@@ -213,18 +216,18 @@ UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
       <pre class="lines">
 
 
-32
-33
-34
 35
 36
 37
 38
 39
-40</pre>
+40
+41
+42
+43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/cli/hexdump.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/cli/hexdump.rb', line 35</span>
 
 <span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">input</span>: <span style="color:#069">nil</span>, **options)
   input = <span style="color:#d70">$stdin</span>.read.chomp <span style="color:#080;font-weight:bold">if</span> input == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">-</span><span style="color:#710">'</span></span>
@@ -232,7 +235,7 @@ UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
     puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Hexdump</span>.new(input).display
   <span style="color:#080;font-weight:bold">else</span>
     <span style="color:#777"># using send() is safe here thanks to the value whitelist</span>
-    puts puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Hexdump</span>.send(options[<span style="color:#A60">:enc</span>], input)
+    puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Hexdump</span>.send(options[<span style="color:#A60">:enc</span>], input)
   <span style="color:#080;font-weight:bold">end</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
@@ -245,7 +248,7 @@ UTF-32LE: 41000000 43000000 43000000 45000000 49000000 53000000
 </div>
 
       <div id="footer">
-  Generated on Tue Jan 23 10:38:47 2024 by
+  Generated on Fri Feb 16 11:14:39 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.34 (ruby-3.3.0).
 </div>
