@@ -86,6 +86,7 @@ module Unisec
     end
 
     # Display a CLI-friendly output summurizing the hexdump in all Unicode encodings
+    # @return [String] CLI-ready output
     # @example
     #   puts Unisec::Hexdump.new('K').display # =>
     #   # UTF-8: e2 84 aa
