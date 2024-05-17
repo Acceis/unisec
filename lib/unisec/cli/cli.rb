@@ -24,7 +24,8 @@ module Unisec
       register 'confusables randomize', Confusables::Randomize
       register 'grep', Grep
       register 'hexdump', Hexdump
-      register 'normalize', Normalize
+      register 'normalize all', Normalize::All
+      register 'normalize replace', Normalize::Replace
       register 'properties char', Properties::Char
       register 'properties codepoints', Properties::Codepoints
       register 'properties list', Properties::List

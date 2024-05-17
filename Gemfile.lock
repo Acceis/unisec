@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    unisec (0.0.5)
+    unisec (0.0.6)
       ctf-party (~> 3.0)
       dry-cli (~> 1.0)
       paint (~> 2.3)

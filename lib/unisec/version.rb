@@ -2,5 +2,5 @@
 
 module Unisec
   # Version of unisec library and app
-  VERSION = '0.0.5'
+  VERSION = '0.0.6'
 end

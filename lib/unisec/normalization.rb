@@ -5,6 +5,16 @@ require 'ctf_party'
 module Unisec
   # Normalization Forms
   class Normalization
+    # HTML escapable characters mapped with their Unicode counterparts that will
+    # cast to themself after applying normalization forms using compatibility mode.
+    HTML_ESCAPE_BYPASS = {
+      '<' => ['﹤', '＜'],
+      '>' => ['﹥', '＞'],
+      '"' => ['＂'],
+      "'" => ['＇'],
+      '&' => ['﹠', '＆']
+    }.freeze
+
     # Original input
     # @return [String] untouched input
     attr_reader :original
@@ -64,6 +74,25 @@ module Unisec
       str.unicode_normalize(:nfkd)
     end
 
+    # Replace HTML escapable characters with their Unicode counterparts that will
+    # cast to themself after applying normalization forms using compatibility mode.
+    # Usefull for XSS, to bypass HTML escape.
+    # If several values are possible, one is picked randomly.
+    # @param str [String] the target string
+    # @return [String] escaped input
+    def self.replace_bypass(str)
+      str = str.dup
+      HTML_ESCAPE_BYPASS.each do |k, v|
+        str.gsub!(k, v.sample)
+      end
+      str
+    end
+
+    # Instance version of {Normalization.replace_bypass}.
+    def replace_bypass
+      Normalization.replace_bypass(@original)
+    end
+
     # Display a CLI-friendly output summurizing all normalization forms
     # @return [String] CLI-ready output
     # @example
@@ -89,6 +118,20 @@ module Unisec
         colorize.call('NFKC', @nfkc) +
         colorize.call('NFD', @nfd) +
         colorize.call('NFKD', @nfkd)
+    end
+
+    # Display a CLI-friendly output of the XSS payload to bypass HTML escape and
+    # what it does once normalized in NFKC & NFKD.
+    def display_replace
+      colorize = lambda { |form_title, form_attr|
+        "#{Paint[form_title.to_s, :underline,
+                 :bold]}: #{form_attr}\n  #{Paint[Unisec::Properties.chars2codepoints(form_attr), :red]}\n"
+      }
+      payload = replace_bypass
+      colorize.call('Original', @original) +
+        colorize.call('Bypass payload', payload) +
+        colorize.call('NFKC', Normalization.nfkc(payload)) +
+        colorize.call('NFKD', Normalization.nfkd(payload))
     end
   end
 end

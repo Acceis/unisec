@@ -58,7 +58,9 @@ Options:
   - [Randomize](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Confusables/Randomize)
 - [Grep](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Grep)
 - [Hexdump](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Hexdump)
-- [Normalize](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Normalize)
+- **Normalize**
+  - [All](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Normalize/All)
+  - [Replace](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Normalize/Replace)
 - **Properties**
   - [Char](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/Char)
   - [Codepoints](https://acceis.github.io/unisec/yard/Unisec/CLI/Commands/Properties/Codepoints)

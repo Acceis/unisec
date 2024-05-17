@@ -10,5 +10,8 @@ class UnisecTest < Minitest::Test
     assert_equal("\u{017F 0323 0307}", Unisec::Normalization.nfd("\u{1E9B 0323}"))
     assert_equal("\u{0073 0323 0307}", Unisec::Normalization.nfkd("\u{1E9B 0323}"))
     assert_equal("\u{2126}", Unisec::Normalization.new("\u{2126}").original)
+
+    payload = "<svg onload=\"alert('XSS')\">"
+    assert_equal(payload, Unisec::Normalization.replace_bypass(payload).unicode_normalize(:nfkc))
   end
 end

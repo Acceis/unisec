@@ -1,5 +1,14 @@
 ## [unreleased]
 
+## [0.0.6]
+
+**Features**
+
+- _Prepare a XSS payload for HTML escape bypass (HTML escape followed by NFKC / NFKD normalization)_
+  - Rename CLI command `normalize` into `normalize all`
+  - Add a new method `replace_bypass` in the class `Unisec::Normalization`
+  - Add a new CLI command `normalize replace` (using the new `replace_bypass` method)
+
 ## [0.0.5]
 
 **Features**
