@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Unisec::CLI::Commands::Confusables::Randomize
+  Class: Unisec::CLI::Commands::Normalize::All
   
     &mdash; Documentation by YARD 0.9.36
   
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="../../../../css/common.css" type="text/css" />
 
 <script type="text/javascript">
-  pathId = "Unisec::CLI::Commands::Confusables::Randomize";
+  pathId = "Unisec::CLI::Commands::Normalize::All";
   relpath = '../../../../';
 </script>
 
@@ -36,10 +36,10 @@
       <div id="header">
         <div id="menu">
   
-    <a href="../../../../_index.html">Index (R)</a> &raquo;
-    <span class='title'><span class='object_link'><a href="../../../../Unisec.html" title="Unisec (module)">Unisec</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CLI.html" title="Unisec::CLI (module)">CLI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Commands.html" title="Unisec::CLI::Commands (module)">Commands</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Confusables.html" title="Unisec::CLI::Commands::Confusables (module)">Confusables</a></span></span>
+    <a href="../../../../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../../Unisec.html" title="Unisec (module)">Unisec</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../../CLI.html" title="Unisec::CLI (module)">CLI</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Commands.html" title="Unisec::CLI::Commands (module)">Commands</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Normalize.html" title="Unisec::CLI::Commands::Normalize (module)">Normalize</a></span></span>
      &raquo; 
-    <span class="title">Randomize</span>
+    <span class="title">All</span>
   
 </div>
 
@@ -59,7 +59,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Unisec::CLI::Commands::Confusables::Randomize
+      <div id="content"><h1>Class: Unisec::CLI::Commands::Normalize::All
   
   
   
@@ -76,7 +76,7 @@
           
             <li class="next">Dry::CLI::Command</li>
           
-            <li class="next">Unisec::CLI::Commands::Confusables::Randomize</li>
+            <li class="next">Unisec::CLI::Commands::Normalize::All</li>
           
         </ul>
         <a href="#" class="inheritanceTree">show all</a>
@@ -96,19 +96,29 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/unisec/cli/confusables.rb</dd>
+    <dd>lib/unisec/cli/normalization.rb</dd>
   </dl>
   
 </div>
 
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
-    <p>Command <code>unisec confusables randomize</code></p>
+    <p>Command <code>unisec normalize all &quot;example&quot;</code></p>
 <p>Example:</p>
-<pre class="code plaintext"><code class="plaintext">$ unisec confusables randomize noraj
-Original:    noraj
-Transformed: ռ໐𝘳𝜶𝙟
-…
+<pre class="code plaintext"><code class="plaintext">➜ unisec normalize all ẛ̣
+Original: ẛ̣
+  U+1E9B U+0323
+NFC: ẛ̣
+  U+1E9B U+0323
+NFKC: ṩ
+  U+1E69
+NFD: ẛ̣
+  U+017F U+0323 U+0307
+NFKD: ṩ
+  U+0073 U+0323 U+0307
+
+➜ unisec normalize all ẛ̣  --form nfkd
+ṩ
 </code></pre>
 
 
@@ -135,7 +145,7 @@ Transformed: ռ໐𝘳𝜶𝙟
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(str: nil)  &#x21d2; Object </a>
+      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(input: nil, **options)  &#x21d2; Object </a>
     
 
     
@@ -149,7 +159,7 @@ Transformed: ռ໐𝘳𝜶𝙟
   
 
   
-    <span class="summary_desc"><div class='inline'><p>Replace all characters from a string with random confusables when possible.</p>
+    <span class="summary_desc"><div class='inline'><p>Normalize in all forms.</p>
 </div></span>
   
 </li>
@@ -168,7 +178,7 @@ Transformed: ռ໐𝘳𝜶𝙟
       <div class="method_details first">
   <h3 class="signature first" id="call-instance_method">
   
-    #<strong>call</strong>(str: nil)  &#x21d2; <tt>Object</tt> 
+    #<strong>call</strong>(input: nil, **options)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -176,7 +186,7 @@ Transformed: ռ໐𝘳𝜶𝙟
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Replace all characters from a string with random confusables when possible</p>
+    <p>Normalize in all forms</p>
 
 
   </div>
@@ -187,7 +197,7 @@ Transformed: ռ໐𝘳𝜶𝙟
   
     <li>
       
-        <span class='name'>str</span>
+        <span class='name'>input</span>
       
       
         <span class='type'>(<tt>String</tt>)</span>
@@ -197,7 +207,7 @@ Transformed: ռ໐𝘳𝜶𝙟
       
       
         &mdash;
-        <div class='inline'><p>Unicode string</p>
+        <div class='inline'><p>Input string to normalize</p>
 </div>
       
     </li>
@@ -211,15 +221,27 @@ Transformed: ռ໐𝘳𝜶𝙟
       <pre class="lines">
 
 
-56
-57
-58</pre>
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/cli/confusables.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/unisec/cli/normalization.rb', line 43</span>
 
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">str</span>: <span style="color:#069">nil</span>, **)
-  <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Confusables</span>.randomize_display(str)
+<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">input</span>: <span style="color:#069">nil</span>, **options)
+  input = <span style="color:#d70">$stdin</span>.read.chomp <span style="color:#080;font-weight:bold">if</span> input == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">-</span><span style="color:#710">'</span></span>
+  <span style="color:#080;font-weight:bold">if</span> options[<span style="color:#A60">:form</span>].nil?
+    puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Normalization</span>.new(input).display
+  <span style="color:#080;font-weight:bold">else</span>
+    <span style="color:#777"># using send() is safe here thanks to the value whitelist</span>
+    puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Normalization</span>.send(options[<span style="color:#A60">:form</span>], input)
+  <span style="color:#080;font-weight:bold">end</span>
 <span style="color:#080;font-weight:bold">end</span></pre>
     </td>
   </tr>

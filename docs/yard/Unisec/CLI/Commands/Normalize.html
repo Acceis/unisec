@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>
-  Class: Unisec::CLI::Commands::Normalize
+  Module: Unisec::CLI::Commands::Normalize
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.36
   
 </title>
 
@@ -59,30 +59,12 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><h1>Class: Unisec::CLI::Commands::Normalize
+      <div id="content"><h1>Module: Unisec::CLI::Commands::Normalize
   
   
   
 </h1>
 <div class="box_info">
-  
-  <dl>
-    <dt>Inherits:</dt>
-    <dd>
-      <span class="inheritName">Dry::CLI::Command</span>
-      
-        <ul class="fullTree">
-          <li>Object</li>
-          
-            <li class="next">Dry::CLI::Command</li>
-          
-            <li class="next">Unisec::CLI::Commands::Normalize</li>
-          
-        </ul>
-        <a href="#" class="inheritanceTree">show all</a>
-      
-    </dd>
-  </dl>
   
 
   
@@ -104,23 +86,6 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     <p>CLI sub-commands <code>unisec normalize xxx</code> for the class <span class='object_link'><a href="../../Normalization.html" title="Unisec::Normalization (class)">Normalization</a></span> from the lib.</p>
-<p>Command <code>unisec normalize &quot;example&quot;</code></p>
-<p>Example:</p>
-<pre class="code plaintext"><code class="plaintext">➜ unisec normalize ẛ̣
-Original: ẛ̣
-  U+1E9B U+0323
-NFC: ẛ̣
-  U+1E9B U+0323
-NFKC: ṩ
-  U+1E69
-NFD: ẛ̣
-  U+017F U+0323 U+0307
-NFKD: ṩ
-  U+0073 U+0323 U+0307
-
-➜ unisec normalize ẛ̣  --form nfkd
-ṩ
-</code></pre>
 
 
   </div>
@@ -128,135 +93,31 @@ ṩ
 <div class="tags">
   
 
-</div>
-
-
-
-
-
-
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
   
-    <h2>
-      Instance Method Summary
-      <small><a href="#" class="summary_toggle">collapse</a></small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
     
-      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>(input: nil, **options)  &#x21d2; Object </a>
+  
     
-
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Normalize/All.html" title="Unisec::CLI::Commands::Normalize::All (class)">All</a></span>, <span class='object_link'><a href="Normalize/Replace.html" title="Unisec::CLI::Commands::Normalize::Replace (class)">Replace</a></span>
     
-  </span>
   
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'><p>Normalize in all forms.</p>
-</div></span>
-  
-</li>
-
-      
-    </ul>
-  
+</p>
 
 
-  
-
-  <div id="instance_method_details" class="method_details_list">
-    <h2>Instance Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="call-instance_method">
-  
-    #<strong>call</strong>(input: nil, **options)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    <p>Normalize in all forms</p>
 
 
-  </div>
-</div>
-<div class="tags">
-  <p class="tag_title">Parameters:</p>
-<ul class="param">
-  
-    <li>
-      
-        <span class='name'>input</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'><p>Input string to normalize</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
 
 
-43
-44
-45
-46
-47
-48
-49
-50
-51</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/unisec/cli/normalization.rb', line 43</span>
-
-<span style="color:#080;font-weight:bold">def</span> <span style="color:#06B;font-weight:bold">call</span>(<span style="color:#606">input</span>: <span style="color:#069">nil</span>, **options)
-  input = <span style="color:#d70">$stdin</span>.read.chomp <span style="color:#080;font-weight:bold">if</span> input == <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">-</span><span style="color:#710">'</span></span>
-  <span style="color:#080;font-weight:bold">if</span> options[<span style="color:#A60">:form</span>].nil?
-    puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Normalization</span>.new(input).display
-  <span style="color:#080;font-weight:bold">else</span>
-    <span style="color:#777"># using send() is safe here thanks to the value whitelist</span>
-    puts <span style="color:#036;font-weight:bold">Unisec</span>::<span style="color:#036;font-weight:bold">Normalization</span>.send(options[<span style="color:#A60">:form</span>], input)
-  <span style="color:#080;font-weight:bold">end</span>
-<span style="color:#080;font-weight:bold">end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-  </div>
 
 </div>
 
       <div id="footer">
-  Generated on Fri Feb 16 11:14:39 2024 by
+  Generated on Fri May 17 16:33:54 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.36 (ruby-3.3.0).
 </div>
 
     </div>

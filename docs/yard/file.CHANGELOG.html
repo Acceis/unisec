@@ -6,7 +6,7 @@
 <title>
   File: CHANGELOG
   
-    &mdash; Documentation by YARD 0.9.34
+    &mdash; Documentation by YARD 0.9.36
   
 </title>
 
@@ -58,6 +58,17 @@
       </div>
 
       <div id="content"><div id='filecontents'><h2>[unreleased]</h2>
+<h2>[0.0.6]</h2>
+<p><strong>Features</strong></p>
+<ul>
+<li><em>Prepare a XSS payload for HTML escape bypass (HTML escape followed by NFKC / NFKD normalization)</em>
+<ul>
+<li>Rename CLI command <code>normalize</code> into <code>normalize all</code></li>
+<li>Add a new method <code>replace_bypass</code> in the class <code>Unisec::Normalization</code></li>
+<li>Add a new CLI command <code>normalize replace</code> (using the new <code>replace_bypass</code> method)</li>
+</ul>
+</li>
+</ul>
 <h2>[0.0.5]</h2>
 <p><strong>Features</strong></p>
 <ul>
@@ -103,9 +114,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Fri Feb 16 11:14:39 2024 by
+  Generated on Fri May 17 16:33:54 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.34 (ruby-3.3.0).
+  0.9.36 (ruby-3.3.0).
 </div>
 
     </div>
