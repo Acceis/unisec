@@ -33,3 +33,5 @@ Style/Documentation:
   Exclude:
     - 'lib/unisec/cli/surrogates.rb'
     - 'lib/unisec/utils.rb'
+Gemspec/AddRuntimeDependency:
+  Enabled: false # https://github.com/rubocop/rubocop/pull/13030#discussion_r1674791776
