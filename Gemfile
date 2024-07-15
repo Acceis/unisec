@@ -7,7 +7,7 @@ gemspec
 
 # Needed for the CLI only
 group :runtime, :cli do
-  gem 'dry-cli', '~> 1.0' # for arg parsing
+  gem 'dry-cli', '~> 1.1' # for arg parsing
   gem 'paint', '~> 2.3' # for colorized ouput
 end
 
