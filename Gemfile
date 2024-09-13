@@ -15,7 +15,7 @@ end
 group :runtime, :all do
   gem 'ctf-party', '~> 3.0' # string conversion
   gem 'twitter_cldr', '~> 6.12' # ICU / CLDR
-  gem 'unicode-confusable', '~> 1.10' # confusable chars
+  gem 'unicode-confusable', '~> 1.11' # confusable chars
 end
 
 # Needed to install dependencies

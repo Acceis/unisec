@@ -59,7 +59,7 @@ GEM
       tzinfo
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unicode-confusable (1.10.0)
+    unicode-confusable (1.11.0)
     unicode-display_width (2.5.0)
     uri (0.13.0)
     webrick (1.8.1)
@@ -82,7 +82,7 @@ DEPENDENCIES
   rake (~> 13.2)
   rubocop (~> 1.64)
   twitter_cldr (~> 6.12)
-  unicode-confusable (~> 1.10)
+  unicode-confusable (~> 1.11)
   unisec!
   webrick (~> 1.8, >= 1.8.1)
   yard (>= 0.9.27, < 0.10)
