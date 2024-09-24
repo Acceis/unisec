@@ -37,7 +37,7 @@ end
 
 group :development, :docs do
   gem 'commonmarker', '~> 0.23' # for markdown support in YARD
-  gem 'webrick', '~> 1.8', '>= 1.8.1' # for yard server
+  gem 'webrick', '~> 1.8' # for yard server
   gem 'yard', ['>= 0.9.27', '< 0.10']
   gem 'yard-coderay', '~> 0.1' # for syntax highlight support in YARD
 end
